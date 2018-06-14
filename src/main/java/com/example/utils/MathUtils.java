@@ -1,7 +1,7 @@
 package com.example.utils;
 
 public class MathUtils {
-    public boolean isPrime(int input) {
-        return false;
+    public static boolean isPrime(int input) {
+        return true;
     }
 }
