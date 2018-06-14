@@ -1,5 +1,6 @@
 package com.example.servlets;
 
+import com.example.utils.MathUtils;
 import com.google.appengine.repackaged.com.google.gson.Gson;
 import com.google.appengine.repackaged.com.google.gson.annotations.SerializedName;
 
@@ -15,29 +16,30 @@ public class PrimeTestServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String number = request.getParameter("number");
-        int num = -1;
+        int num;
         try {
             num = Integer.parseInt(number);
         } catch (NumberFormatException e) {
             response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-            log("Bad input: " + number);
-            response.getWriter().write(GSON.toJson(getResponseWithResult()));
+            System.out.println("Bad input: " + number);
+            response.getWriter().write(GSON.toJson(new Result(false, "Invalid input, please set parameter to be valid integer.")));
             return;
         }
 
         response.setStatus(HttpServletResponse.SC_ACCEPTED);
-        response.getWriter().write(GSON.toJson(getResponseWithResult()));
-    }
-
-    protected Result getResponseWithResult() {
-        return null;
+        response.getWriter().write(GSON.toJson(new Result(MathUtils.isPrime(num), null)));
     }
 
     class Result {
         @SerializedName("result")
-        public boolean result;
+        boolean mResult;
 
-        @SerializedName("errorMessage")
-        public String errorMessage;
+        @SerializedName("error_message")
+        String mErrorMessage;
+
+        Result(boolean result, String errorMessage) {
+            mResult = result;
+            mErrorMessage = errorMessage;
+        }
     }
 }

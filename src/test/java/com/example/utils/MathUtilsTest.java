@@ -9,13 +9,19 @@ public class MathUtilsTest {
     @Test
     public void isPrime_withPrimeNumbers_shouldReturnTrue() {
         // inputs
-        int input = 2;
+        int input1 = 2;
+        int input2 = 5;
+        int input3 = 2147480791;
 
         // execution
-        boolean result = MathUtils.isPrime(input);
+        boolean result1 = MathUtils.isPrime(input1);
+        boolean result2 = MathUtils.isPrime(input2);
+        boolean result3 = MathUtils.isPrime(input3);
 
         // assertions
-        assertTrue(result);
+        assertTrue(result1);
+        assertTrue(result2);
+        assertTrue(result3);
     }
 
     @Test
