@@ -43,6 +43,9 @@ appengineDeploy.dependsOn test
 appengineStage.dependsOn test
 
 appengine {  // App Engine tasks configuration
+//  run {
+//    jvmFlags = ['-Xdebug', '-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005']
+//  }
   deploy {   // deploy configuration
 
   }

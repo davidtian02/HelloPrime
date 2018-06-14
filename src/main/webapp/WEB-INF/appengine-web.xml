@@ -3,4 +3,5 @@
   <application>helloprime-207201</application><!-- unused for Cloud SDK based tooling -->
   <version>1</version><!-- unused for Cloud SDK based tooling -->
   <threadsafe>true</threadsafe>
+  <runtime>java8</runtime>
 </appengine-web-app>
