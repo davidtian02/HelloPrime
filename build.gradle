@@ -19,6 +19,7 @@ repositories {   // repositories for Jar's you access in your code
 apply plugin: 'java'                              // standard Java tasks
 apply plugin: 'war'                               // standard Web Archive plugin
 apply plugin: 'com.google.cloud.tools.appengine'  // App Engine tasks
+apply plugin: 'idea'
 
 dependencies {
   compile 'com.google.appengine:appengine-api-1.0-sdk:+'  // Latest App Engine Api's
@@ -28,7 +29,7 @@ dependencies {
 
 // Add your dependencies here.
 //  compile 'com.google.cloud:google-cloud:+'   // Latest Cloud API's http://googlecloudplatform.github.io/google-cloud-java
-  compile group: 'org.apache.commons', name: 'commons-math3', version: '3.0'
+  compile group: 'org.apache.commons', name: 'commons-math3', version: '3.2'
 
   // for tests
   testCompile 'junit:junit:4.12'

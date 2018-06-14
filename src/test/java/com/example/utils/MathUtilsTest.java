@@ -46,7 +46,7 @@ public class MathUtilsTest {
     public void isPrime_withCompositeNumber_shouldReturnFalse() {
         int input1 = 4;
         int input2 = 8;
-        int input3 = 2147480791;
+        int input3 = 2147480792;
 
         boolean result1 = MathUtils.isPrime(input1);
         boolean result2 = MathUtils.isPrime(input2);
