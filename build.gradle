@@ -30,6 +30,7 @@ dependencies {
 // Add your dependencies here.
 //  compile 'com.google.cloud:google-cloud:+'   // Latest Cloud API's http://googlecloudplatform.github.io/google-cloud-java
   compile group: 'org.apache.commons', name: 'commons-math3', version: '3.2'
+  compile 'com.google.code.gson:gson:2.8.5'
 
   // for tests
   testCompile 'junit:junit:4.12'
